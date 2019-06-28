@@ -3,7 +3,7 @@ public class Menu{
 
 	private int optionsNum;
 
-	private static String[] menu;
+	private String[] menu;
 
 	public Menu(int optionsNum){
 
@@ -24,7 +24,7 @@ public class Menu{
 
 	}
 
-	public static String[] getMenu(){
+	public String[] getMenu(){
 
 		return menu;
 
