@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class MainMenu extends Menu{
 
@@ -5,13 +6,15 @@ public class MainMenu extends Menu{
 
 		super(4);
 
+		Scanner scanner = new Scanner(System.in);
+
 		String[] mainMenu = generateMainMenu();
 
-		printMenu(mainMenu);
+		printMenu(mainMenu, scanner);
 
 	}
 
-	public static String[] generateMainMenu(){
+	public String[] generateMainMenu(){
 
 		String[] mainMenu = getMenu();
 		String[] options = {"New Game","Load Game","Credits","Exit Game"};
@@ -25,7 +28,7 @@ public class MainMenu extends Menu{
 		return mainMenu;
 	}
 
-	public static void printMenu(String[] mainMenu){
+	public void printMenu(String[] mainMenu, Scanner scanner){
 
 		System.out.println("--------------TRIUMPHANT WILL--------------");
 
@@ -37,7 +40,74 @@ public class MainMenu extends Menu{
 
 		System.out.println("-------------------------------------------");
 
+		getInput(mainMenu, scanner);
 	}
 
+	public void quit(String[] mainMenu, Scanner scanner){
+
+		System.out.print("Are you sure? Your game might not have been saved. Type yes or no: ");
+
+		getQuitInput(mainMenu, scanner);
+
+	}
+
+	public void getQuitInput(String[] mainMenu, Scanner scanner){
+
+		String input = scanner.next().toUpperCase();
+
+		if(input.equals("YES") || input.equals("Y")){
+
+			System.exit(0);
+
+		}
+
+		else if(input.equals("NO") || input.equals("N")){
+
+			printMenu(mainMenu, scanner);
+
+		}else{
+
+			System.out.print("Please enter a valid option: ");
+			getQuitInput(mainMenu, scanner);
+
+		}
+
+	}
+
+	public void getInput(String[] mainMenu, Scanner scanner){
+
+		System.out.print("Select an option: ");
+
+		String input = scanner.next();
+
+		if(input.equals("1") || input.toUpperCase().replaceAll("\\s+", "").equals("NEWGAME")){
+
+			printMenu(mainMenu, scanner);
+
+		}
+
+		else if(input.equals("2") || input.toUpperCase().replaceAll("\\s+", "").equals("LOADGAME")){
+
+			printMenu(mainMenu, scanner);
+
+		}
+
+		else if(input.equals("3") || input.toUpperCase().replaceAll("\\s+", "").equals("CREDITS")){
+
+			printMenu(mainMenu, scanner);
+
+		}
+
+		else if(input.equals("4") || input.toUpperCase().replaceAll("\\s+", "").equals("EXITGAME")){
+
+			quit(mainMenu, scanner);
+
+		}else{
+
+			getInput(mainMenu, scanner);
+
+		}
+
+	}
 
 }
