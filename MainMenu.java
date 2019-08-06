@@ -94,6 +94,7 @@ public class MainMenu extends Menu{
 
 		else if(input.equals("3") || input.toUpperCase().replaceAll("\\s+", "").equals("CREDITS")){
 
+			System.out.println("This program was made by Nathaniel K. Blanquel as an open source project. Feel free to edit.");
 			printMenu(mainMenu, scanner);
 
 		}
