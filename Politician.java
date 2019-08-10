@@ -1,4 +1,4 @@
-public class Politician extends YoundAdult{
+public class Politician extends YoungAdult{
 
 	public Politician(){
 

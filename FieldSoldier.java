@@ -1,4 +1,4 @@
-public class FieldSoldier extends YoundAdult{
+public class FieldSoldier extends YoungAdult{
 
 	public FieldSoldier(){
 

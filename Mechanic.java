@@ -1,4 +1,4 @@
-public class Mechanic extends YoundAdult{
+public class Mechanic extends YoungAdult{
 
 	public Mechanic(){
 

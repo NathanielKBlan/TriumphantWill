@@ -43,6 +43,12 @@ public class MainMenu extends Menu{
 		getInput(mainMenu, scanner);
 	}
 
+	public void startNewGame(){
+
+		CharacterCreationMenu charCreationMenu = new CharacterCreationMenu();
+
+	}
+
 	public void quit(String[] mainMenu, Scanner scanner){
 
 		System.out.print("Are you sure? Your game might not have been saved. Type yes or no: ");
@@ -82,7 +88,7 @@ public class MainMenu extends Menu{
 
 		if(input.equals("1") || input.toUpperCase().replaceAll("\\s+", "").equals("NEWGAME")){
 
-			printMenu(mainMenu, scanner);
+			startNewGame();
 
 		}
 

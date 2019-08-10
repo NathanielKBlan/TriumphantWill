@@ -33,43 +33,43 @@ public class YoungAdult{
 
 	}
 
-	public static void getRepair(){
+	public int getRepair(){
 
 		return repair;
 
 	}
 
-	public static void getCharisma(){
+	public int getCharisma(){
 
 		return charisma;
 
 	}
 
-	public static void getHealth(){
+	public int getHealth(){
 
 		return health;
 
 	}
 
-	public static void getStamina(){
+	public int getStamina(){
 
 		return stamina;
 
 	}
 
-	public static void getFlying(){
+	public int getFlying(){
 
 		return flying;
 
 	}
 
-	public static void getStrength(){
+	public int getStrength(){
 
 		return strength;
 
 	}
 
-	public static void getScience(){
+	public int getScience(){
 
 		return science;
 

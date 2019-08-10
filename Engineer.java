@@ -1,5 +1,5 @@
 
-public class Engineer extends YoundAdult{
+public class Engineer extends YoungAdult{
 
 	public Engineer(){
 

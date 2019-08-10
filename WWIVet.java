@@ -1,4 +1,4 @@
-public class WWIVet extends YoundAdult{
+public class WWIVet extends YoungAdult{
 
 	public WWIVet(){
 
