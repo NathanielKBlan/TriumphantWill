@@ -1,22 +1,28 @@
 
 public class CharacterCreationMenu extends Menu{
 
-	private String[][] classMenu = {{"Egineer:    ", "Field Soldier:    ", "Young Adult (Deprived):    "},
-									{Engineer.getRepair().toString(),FieldSoilder.getRepair().toString(),YoungAdult.getRepair().toString()},
-									{Engineer.getCharisma().toString(),FieldSoilder.getCharisma().toString(),YoungAdult.getCharisma().toString()},
-									{Engineer.getHealth().toString(),FieldSoilder.getHealth().toString(),YoungAdult.getHealth().toString()},
-									{Engineer.getStamina().toString(),FieldSoilder.getStamina().toString(),YoungAdult.getStamina().toString()},
-									{Engineer.getFlying().toString(),FieldSoilder.getFlying().toString(),YoungAdult.getFlying().toString()},
-									{Engineer.getStrength().toString(),FieldSoilder.getStrength().toString(),YoungAdult.getStrength().toString()},
-									{Engineer.getScience().toString(),FieldSoilder.getScience().toString(),YoungAdult.getScience().toString()},
-									{"Mechanic:    ","Politician:    ","WWI Vet:    "}
-									{Mechanic.getRepair().toString(),Politician.getRepair().toString(),WWIVet.getRepair().toString()},
-									{Mechanic.getCharisma().toString(),Politician.getCharisma().toString(),WWIVet.getCharisma().toString()},
-									{Mechanic.getHealth().toString(),Politician.getHealth().toString(),WWIVet.getHealth().toString()},
-									{Mechanic.getStamina().toString(),Politician.getStamina().toString(),WWIVet.getStamina().toString()},
-									{Mechanic.getFlying().toString(),Politician.getFlying().toString(),WWIVet.getFlying().toString()},
-									{Mechanic.getStrength().toString(),Politician.getStrength().toString(),WWIVet.getStrength().toString()},
-									{Mechanic.getScience().toString(),Politician.getScience().toString(),WWIVet.getScience().toString()}};
+
+	private String[][] classMenu = {{"|-----------------|----------------------|-----------------------------|"},
+									{"|    Egineer:     |    ","Field Soldier:    |  ", " Young Adult (Deprived):   |"},
+									{"|-----------------|----------------------|-----------------------------|"},
+									{"|    Repair: 8    |    ","Repair: 2  ","       |   Repair: 0                 |"},
+									{"|    Charisma: 2  |    ","Charisma: 3  ","     |   Charisma: 2               |"},
+									{"|    Health: 15   |    ","Health: 20  ","      |   Health: 10                |"},
+									{"|    Stamina: 10  |    ","Stamina: 20  ","     |   Stamina: 5                |"},
+									{"|    Flying: 5    |    ","Flying: 1 ","        |   Flying: 0                 |"},
+									{"|    Strength: 2  |    ","Strength: 7  ","     |   Strength: 2               |"},
+									{"|    Science: 5   |    ","Science: 1  ","      |   Science: 0                |"},
+									{"|-----------------|----------------------|-----------------------------|"},
+									{"|    Mechanic:    |    ", "Politician:       | ", "  WWI Vet:                  |"},
+									{"|-----------------|----------------------|-----------------------------|"},
+									{"|    Repair: 6    |    ","Repair: 1  ","       |   Repair: 3                 |"},
+									{"|    Charisma: 3  |    ","Charisma: 7  ","     |   Charisma: 2               |"},
+									{"|    Health: 15   |    ","Health: 10  ","      |   Health: 20                |"},
+									{"|    Stamina: 12  |    ","Stamina: 15  ","     |   Stamina: 20               |"},
+									{"|    Flying: 2    |    ","Flying: 0 ","        |   Flying: 3                 |"},
+									{"|    Strength: 5  |    ","Strength: 3  ","     |   Strength: 10              |"},
+									{"|    Science: 2   |    ","Science: 1  ","      |   Science: 2                |"},
+									{"|-----------------|----------------------|-----------------------------|"}};
 
 	public CharacterCreationMenu(){
 
@@ -30,13 +36,21 @@ public class CharacterCreationMenu extends Menu{
 
 	}
 
-	private printClasses(){
+	private void printClasses(){
 
 
 		
 		System.out.println("CHOOSE A CLASS:");
 		for(int i = 0; i < classMenu.length; i++){
-			System.out.println(classMenu[i]);
+
+			for(int j = 0; j < classMenu[i].length; j++){
+
+				System.out.print(classMenu[i][j]);
+
+			}
+
+			System.out.println();
+
 		}
 
 
