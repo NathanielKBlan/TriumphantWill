@@ -2,7 +2,7 @@ package com.cb.triumphantwill.menus;
 
 public class CharacterCreationMenu extends Menu{
 
-
+	//Default playable classes and all their statistics
 	private String[][] classMenu = {{"|-----------------|----------------------|-----------------------------|"},
 									{"|    Egineer:     |    ","Field Soldier:    |  ", " Young Adult (Deprived):   |"},
 									{"|-----------------|----------------------|-----------------------------|"},
@@ -25,23 +25,31 @@ public class CharacterCreationMenu extends Menu{
 									{"|    Science: 2   |    ","Science: 1  ","      |   Science: 2                |"},
 									{"|-----------------|----------------------|-----------------------------|"}};
 
+	//Constructor for the character creation menu
 	public CharacterCreationMenu(){
 
+		//Determines the amount of options within the menu and passes it to the Menu constructor
 		super(6);
-
+		
+		//Prints the prelude
+		System.out.println();
 		System.out.println("--------------PRELUDE--------------");
-		System.out.println("It's 1937, fascism is on the rise, and the Rhineland has been remilitarized. \n Germany has started to defy the treaty of Versailles");
-		System.out.println("--------------CHARACTER CREATION--------------");
-		System.out.println("You are a citizen of the world, unaware of te war that is to come. You are a ...");
-		printClasses();
+		System.out.println("It's 1937, fascism is on the rise, and the Rhineland has been remilitarized. \nGermany has started to defy the treaty of Versailles");
+		System.out.println("-----------------------------------");
+		System.out.println();
 
 	}
 
-	private void printClasses(){
+	//Prints the class options
+	public void printClasses(){
 
-
+		System.out.println("--------------CHARACTER CREATION--------------");
+		System.out.println("You are a citizen of the world, unaware of te war that is to come. You are a ...");
+		System.out.println();
 		
 		System.out.println("CHOOSE A CLASS:");
+		
+		//Print the class menu in a readable format by printing out row of text one by one
 		for(int i = 0; i < classMenu.length; i++){
 
 			for(int j = 0; j < classMenu[i].length; j++){
